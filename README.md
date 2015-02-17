@@ -32,6 +32,9 @@ FIRST PROBLEM: how to run HTML.JS files from node server .
 Understanding Services vs Factory!! {still struggling}
 http://stephanebegaudeau.tumblr.com/post/48776908163/everything-you-need-to-understand-to-start-with
 
+https://groups.google.com/forum/#!msg/angular/56sdORWEoqg/HuZsOsMvKv4J
+
+
 
 
 for deciding which component goes where 
