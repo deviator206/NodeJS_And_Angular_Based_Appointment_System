@@ -34,3 +34,5 @@ http://stephanebegaudeau.tumblr.com/post/48776908163/everything-you-need-to-unde
 
 
 
+for deciding which component goes where 
+http://demisx.github.io/angularjs/2014/09/14/angular-what-goes-where.html
