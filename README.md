@@ -39,3 +39,5 @@ https://groups.google.com/forum/#!msg/angular/56sdORWEoqg/HuZsOsMvKv4J
 
 for deciding which component goes where 
 http://demisx.github.io/angularjs/2014/09/14/angular-what-goes-where.html
+
+http://viralpatel.net/blogs/angularjs-service-factory-tutorial/
