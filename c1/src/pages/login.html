@@ -1,0 +1,7 @@
+<div ng-controller="appLoginController" class="loginPage">
+		<h2> Login! </h2>
+		<span>User Name : </span><input type="text" placeholder="User Name" ng-model="userName"/> <br/>
+		<span>Password : </span><input type="password" placeholder="Password" ng-model="userPassword"/> <br/>
+		<div class="errMsg">{{errorMsg}}</div>
+		<div  class="btn" ng-click="loginClicked($event)"> {{strLoginLabel}} </div>
+	</div>

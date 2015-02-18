@@ -59,11 +59,15 @@ var checkForAPI = function(completeURL,reqType)
 http.createServer(function (request, response) {
     console.log('request starting...');
 	
-	var bProceed = -1, filePath = '.' + request.url;
-	if (filePath == './')
-		filePath = './index.html';
-	
+	var bProceed = -1, filePath =  "c1"+request.url;
+
 	console.log(filePath);
+	if (filePath == '/')
+		filePath = 'c1/index.html';
+	
+	if (filePath == "c1/c1")
+		filePath = 'c1/index.html';
+	
 	bProceed = checkForAPI(request.url,request.method)
 	if(bProceed <= 0)
 	{

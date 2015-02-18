@@ -1,8 +1,5 @@
-var app = angular.module("appointmentApp",["backendModule"]);
 
-
-app.controller('appLoginController',['$scope', '$http',	'backend',function($scope,$http,backend){
-	
+app.controller('appLoginController',['$scope', '$http','$location',	'backend','appDataService',function($scope,$http,$location,backend,appDataService){
 	$scope.userName ="";
 	$scope.userPassword ="";
 	$scope.strLoginLabel = "Login";
@@ -21,10 +18,12 @@ app.controller('appLoginController',['$scope', '$http',	'backend',function($scop
 		$scope.strLoginLabel = "Login";
 	};
 
-	$scope.apiSuccess=function()
+	$scope.apiSuccess=function(data)
 	{
 		console.log("apiSuccess");
+		appDataService.setUserDetails(data.userId,data.name,data.password);
 		$scope.strLoginLabel = "Login";
+		$location.path("/dashboard",false); 
 
 	};
 	$scope.loginClicked = function(evt)
@@ -40,34 +39,8 @@ app.controller('appLoginController',['$scope', '$http',	'backend',function($scop
 									"success":$scope.apiSuccess,
 									 "warning":$scope.apiWarning, 
 									 "error":$scope.apiError})
-				/*
-				var promObj = $http.get("login?name="+$scope.userName+"&passwd="+$scope.userPassword );
-				promObj.success(function(data){
-			
-												if(data !== undefined && data["userId"] !== undefined)
-												{
-
-													console.log(data)	
-												}
-												else
-												{
-													$scope.errorMsg = "Invalid Credentials!!";		
-												}
-												
-												$scope.strLoginLabel = "Login";
-
-											  });
-
-				promObj.error(function(data){
-												$scope.errorMsg = "Error With Login";
-												$scope.strLoginLabel = "Login";
-											  });*/
-
 				
 			}
 	};
-
-	
-
 
 }])

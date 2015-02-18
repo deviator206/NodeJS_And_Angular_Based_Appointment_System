@@ -1,10 +1,26 @@
 var backendModule = angular.module("backendModule",[]);
-backendModule.factory('backend', ['$http', function($http){
-	
-	var apiNameObject = {
 
+backendModule.service('appDataService',  function(){
+		this.profile = {
+			"name":"",
+			"password":""
+		};
+
+		this.setUserDetails = function(id,name,passwd)
+		{
+				this.profile["name"] = name;
+				this.profile["password"] = passwd;
+				this.profile["id"] = id;
+		}
+
+});
+
+
+
+backendModule.factory('backend', ['$http', function($http){
+	var apiNameObject = {
 		"LOGIN_API":"login"
-	}
+	};
 	var serviceObj = {
 			sendRequest:function(data)
 			{
